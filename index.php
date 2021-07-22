@@ -1,53 +1,125 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel = "shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
-    <!---classe css editavel a ajustes -->
-    <link href="css/estilo.css" rel="stylesheet">
-    
-    <!---classe css do bootstrap não mexer -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    
-    <title>Evolution Technology</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Fronte Login</title>
+    <script src="https://kit.fontawesome.com/0e19a3fd47.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-  
-    <h1 class="titulo">Evolution Technology</h1>
-    <!---esse container é usado pela nav os menus -->  
     <div class="container">
-      <nav class="navbar ">
-        <div style="padding-left: 25%;" >
-          <a class="btn btn-outline-dark" style="color: white;" href="index.php">Home</a>
-          <a class="btn btn-outline-dark" style="color: white;" href="sobre.php">Sobre</a>
-          <a class="btn btn-outline-dark" style="color: white;" href="produtos.php">Produtos</a>
-          <a class="btn btn-outline-dark" style="color: white;" href="servicos.php">Serviços</a>
-          <a class="btn btn-outline-dark" style="color: white;" href="faleconosco.php">Fale Conosco</a>
-      </div>
-        </nav>
-    </div>
-      <!---carrousel --> 
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active ">
-            <img class="d-block w-100" style="height: 425px;"  src="imagens/humano.png" alt="Primeiro Slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" style="height: 425px;" src="imagens/investimento.jpg" alt="Segundo Slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" style="height: 425px;" src="imagens/setor-comercial.jpg" alt="Terceiro Slide">
-          </div>
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title-primary">Bem Vindo ao Front</h2>
+                <p class="description description-primary"> Se já é um cadastrado click e Logar</p>
+                <p class="description description-primary"> Logar-se Com Suas Credenciais</p>
+                <button id="signin" class="btn btn-primary"> Logar-Se</button>
+
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second"> Crie Sua Conta </h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-facebook-f">
+                                </i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-google-plus-g"></i></li></a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-linkedin-in"></i></li></a>
+                    </ul>
+                </div>
+                <p class="description description-second">Usando Suas Redes Sociais ou Seu E-mail</p>
+                <form action="cadastro.php" class="form">
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input type="text" placeholder="Nome">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="E-mail">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Senha">
+                    </label>
+                    <button class="btn btn-second">Cadastrar</button>
+                </form>
+            </div>
+
         </div>
-      </div>
 
-      <footer>
+        <div class="content second-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Olá Font</h2>
+                <p class="description description-primary"> Insira Seus Dados</p>
+                <button id="signup" class="btn btn-primary">Cadastrar</button>
 
-        <p>Criado Por Thiago Araújo -> Aluno Da Estácio - AM</p>
-    </footer> 
+            </div>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
+            <div class="second-column">
+                <h2 class="title title-second"> Logar-se </h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-facebook-f">
+                                </i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-google-plus-g"></i></li></a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-linkedin-in"></i></li></a>
+                    </ul>
+                </div>
+                <p class="description description-second">Utilise Suas Credenciais Para Logar-Se</p>
+                <form action="login.php" class="form" method="post">
+
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="E-mail" name="email">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Senha" name="senha">
+                    </label>
+                    <a class="password" href="#">Esqueceu Sua Senha ?</a>
+                    <button class="btn btn-second">Logar-Se</button>
+
+                    <?php
+                        echo $_SESSION['msg']
+                    ?>
+
+
+
+                </form>
+            </div>
+
+        </div>
+
+
+
+        </div>
+    </div>
+
+
+<script src="js/app.js"></script>
 </body>
 </html>
