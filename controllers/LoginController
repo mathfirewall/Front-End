@@ -1,7 +1,7 @@
 <?php
 
 
-abstract class RouteSwitch
+abstract class LoginController
 {
     protected function login()
     {
@@ -15,7 +15,7 @@ abstract class RouteSwitch
         require __DIR__ . '/insereUsers.php';
     }
 
-    protected function login()
+    protected function teste()
     {
         require __DIR__ . '/getUsers.php';
     }
