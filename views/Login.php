@@ -91,7 +91,7 @@
                     </ul>
                 </div>
                 <p class="description description-second">Utilise Suas Credenciais Para Logar-Se</p>
-                <form action="login.php" class="form" method="post">
+                <form action="#" class="form" method="post">
 
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
